@@ -5,18 +5,20 @@ const NavBar = props => {
 
   return (
     <div className="navbar">
-      <img
-        src="https://assets.ccbp.in/frontend/react-js/game-logo-img.png"
-        alt="emoji logo"
-        className="logo"
-      />
-      {!win ||
-        (!loss && (
-          <div className="navContent">
-            <p className="score">Score:{navScore}</p>
-            <p className="score">Top Score:{navTop}</p>
-          </div>
-        ))}
+      <div className="logoCard">
+        <img
+          src="https://assets.ccbp.in/frontend/react-js/game-logo-img.png"
+          alt="emoji logo"
+          className="logo"
+        />
+        <h1 className="logoName">Emoji Game</h1>
+      </div>
+      {!win && !loss && (
+        <div className="navContent">
+          <p className="score">Score: {navScore}</p>
+          <p className="score">Top Score: {navTop}</p>
+        </div>
+      )}
     </div>
   )
 }

@@ -8,7 +8,14 @@ class EmojiGame extends Component {
   state = {score: 0, top: 0, win: false, loss: false, list: []}
 
   playAgain = () => {
-    this.setState({win: false, loss: false, score: 0})
+    const {top} = this.state
+
+    this.setState(pre => {
+      if (pre.score > top) {
+        return {win: false, loss: false, score: 0, top: pre.score, list: []}
+      }
+      return {win: false, loss: false, score: 0, list: []}
+    })
   }
 
   clicked = id => {
@@ -33,10 +40,10 @@ class EmojiGame extends Component {
     if (win === false && loss === false) {
       return (
         <div className="container">
-          <NavBar navScore={score} navTop={top} />
+          <NavBar navScore={score} navTop={top} win={win} loss={loss} />
           <div className="card">
             <ul className="list">
-              {shuffledEmojisList.map(each => (
+              {shuffledEmojisList().map(each => (
                 <EmojiCard item={each} key={each.id} func={this.clicked} />
               ))}
             </ul>
@@ -47,7 +54,7 @@ class EmojiGame extends Component {
 
     return (
       <div className="container">
-        <NavBar score={score} top={top} />
+        <NavBar score={score} top={top} win={win} loss={loss} />
         <div className="card">
           <WinOrLossCard
             iswin={win}

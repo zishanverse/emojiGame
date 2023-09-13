@@ -19,7 +19,7 @@ const WinOrLossCard = props => {
         </div>
         <img
           src="https://assets.ccbp.in/frontend/react-js/won-game-img.png"
-          alt="won"
+          alt="win or lose"
           className="wonOrLossImg"
         />
       </div>
@@ -29,7 +29,7 @@ const WinOrLossCard = props => {
   return (
     <div className="winOrLossCard">
       <div className="resultCardContent">
-        <h1 className="heading">You Loss</h1>
+        <h1 className="heading">You Lose</h1>
         <p className="bestScore">Score</p>
         <p className="resultScore">{resultscore}/12</p>
         <button type="button" className="btn" onClick={playAgain}>
@@ -38,7 +38,7 @@ const WinOrLossCard = props => {
       </div>
       <img
         src="https://assets.ccbp.in/frontend/react-js/lose-game-img.png"
-        alt="loss"
+        alt="win or lose"
         className="wonOrLossImg"
       />
     </div>
