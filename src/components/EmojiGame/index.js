@@ -69,10 +69,3 @@ class EmojiGame extends Component {
 }
 
 export default EmojiGame
-
-/*
-const shuffledEmojisList = () => {
-  const {emojisList} = this.props
-  return emojisList.sort(() => Math.random() - 0.5)
-}
-*/

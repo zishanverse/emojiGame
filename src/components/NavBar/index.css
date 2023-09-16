@@ -3,8 +3,8 @@
   justify-content: space-between;
   background-color: #ffffff40;
   padding: 10px;
-  padding-right: 10vw;
-  padding-left: 10vw;
+  padding-right: 12vw;
+  padding-left: 12vw;
 }
 .logoCard {
   display: flex;
@@ -12,12 +12,13 @@
 }
 .logo {
   color: #ffffff;
-  height: 5vw;
+  height: 6vw;
+  max-height: 70px;
 }
 .logoName {
   color: #fff;
   font-family: 'Roboto';
-  font-size: 2vw;
+  font-size: 3vw;
   font-weight: 500;
 }
 

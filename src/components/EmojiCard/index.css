@@ -16,3 +16,9 @@
   border-radius: 15px;
   border: 0px;
 }
+
+@media (max-width: 767px) {
+  .emoji {
+    height: 11vw;
+  }
+}
