@@ -21,8 +21,21 @@
   list-style-type: none;
 }
 
+.center {
+  text-align: center;
+}
+
 @media (max-width: 767px) {
   .list {
     width: 70vw;
   }
 }
+
+@media (max-width: 575px) {
+  .center {
+    font-size: 13px;
+    margin-top: 25px;
+  }
+}
+
+
