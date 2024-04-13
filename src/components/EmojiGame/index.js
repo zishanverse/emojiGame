@@ -41,6 +41,7 @@ class EmojiGame extends Component {
       return (
         <div className="container">
           <NavBar navScore={score} navTop={top} win={win} loss={loss} />
+          <h1 className='logoName center'>Select all unique emojis</h1>
           <div className="card">
             <ul className="list">
               {shuffledEmojisList().map(each => (
